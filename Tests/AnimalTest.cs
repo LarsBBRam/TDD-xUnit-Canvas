@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestPlatform.Common.Utilities;
 
 namespace Tests;
+
 using Core.Classes;
 
 public class AnimalTest
@@ -19,10 +20,15 @@ public class AnimalTest
 
         //Assert
         Assert.NotNull(bear);
+
         Assert.Equal(bear.Age, age);
+
         Assert.Equal(bear.Name, name);
+
         Assert.Equal(bear.FurColor, furColor);
+
         Assert.Equal(bear.FoodType, feed);
 
+        Assert.IsAssignableFrom<Animal>(bear);
     }
 }
